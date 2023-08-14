@@ -23,29 +23,22 @@ class OtherActivityA : AppCompatActivity() {
 
 
     private fun gettingDataFromHomeActivity() {
+        receivingBundleData()
         receivingSimpleIntent()
-        receivingBundledIntent()
         receivingParcelableIntent()
         receivingSerializableData()
     }
+    private fun receivingBundleData(){
+        val bundle = intent.extras
+        val name = bundle?.getString("key_name")
+        Toast.makeText(this, name, Toast.LENGTH_SHORT).show()
 
+    }
     private fun receivingSimpleIntent() {
         val receivedIntent = intent
         val name1 = receivedIntent.getStringExtra("fname")
         name1?.let {
-            Toast.makeText(this@OtherActivityA, it, Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    private fun receivingBundledIntent() {
-        val bundle = intent.extras
-        bundle?.apply {
-            val name2 = getString("fullName")
-            val chackName = getInt("chack")
-            name2?.let {
-                Toast.makeText(this@OtherActivityA, "$name2 and $chackName", Toast.LENGTH_SHORT)
-                    .show()
-            }
+            Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -56,7 +49,7 @@ class OtherActivityA : AppCompatActivity() {
             TODO()
         }
         person?.let {
-             val snackbar = Snackbar.make(window.decorView,"parcelize data = ${it.name}",Snackbar.LENGTH_SHORT).show()
+            val snackbar = Snackbar.make(window.decorView, "parcelize data = ${it.name}", Snackbar.LENGTH_SHORT).show()
         }
     }
 
@@ -68,7 +61,7 @@ class OtherActivityA : AppCompatActivity() {
             TODO()
         }
         value?.let {
-             val snackbar = Snackbar.make(window.decorView,"Serialized data = ${it.id.toString()}",Snackbar.LENGTH_SHORT).show()
+            val snackbar = Snackbar.make(window.decorView, "Serialized data = ${it.id}", Snackbar.LENGTH_SHORT).show()
         }
     }
 }
