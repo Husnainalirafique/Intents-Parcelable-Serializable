@@ -23,17 +23,11 @@ class OtherActivityA : AppCompatActivity() {
 
 
     private fun gettingDataFromHomeActivity() {
-        receivingBundleData()
         receivingSimpleIntent()
         receivingParcelableIntent()
         receivingSerializableData()
     }
-    private fun receivingBundleData(){
-        val bundle = intent.extras
-        val name = bundle?.getString("key_name")
-        Toast.makeText(this, name, Toast.LENGTH_SHORT).show()
 
-    }
     private fun receivingSimpleIntent() {
         val receivedIntent = intent
         val name1 = receivedIntent.getStringExtra("fname")
@@ -63,6 +57,9 @@ class OtherActivityA : AppCompatActivity() {
         value?.let {
             val snackbar = Snackbar.make(window.decorView, "Serialized data = ${it.id}", Snackbar.LENGTH_SHORT).show()
         }
+    }
+    private fun foo(){
+
     }
 }
 

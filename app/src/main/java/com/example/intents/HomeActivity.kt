@@ -1,5 +1,6 @@
 package com.example.intents
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -27,7 +28,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         binding.btnIntentWithBundle.setOnClickListener {
-            val intent = Intent(this, OtherActivityA::class.java)
+            val intent = Intent(this, ReceivingBundleActivity::class.java)
             val bundle = Bundle()
             bundle.putString("key_name", "Hello, this is some data!")
             intent.putExtras(bundle)
@@ -67,6 +68,5 @@ class HomeActivity : AppCompatActivity() {
             }
         }
     }
-
-
+    
 }
