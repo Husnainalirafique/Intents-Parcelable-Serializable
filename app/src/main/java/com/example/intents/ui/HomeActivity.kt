@@ -1,12 +1,15 @@
-package com.example.intents
+package com.example.intents.ui
 
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import com.example.intents.R
 import com.example.intents.databinding.ActivityHomeBinding
+import com.example.intents.parcelable.Person
+import com.example.intents.serialization.Data
+import com.example.intents.utils.setStatusBarAppearance
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding

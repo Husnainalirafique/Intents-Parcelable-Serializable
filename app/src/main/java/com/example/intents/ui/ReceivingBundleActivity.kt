@@ -1,8 +1,9 @@
-package com.example.intents
+package com.example.intents.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.intents.R
 
 class ReceivingBundleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.example.intents
+package com.example.intents.serialization
 
 import kotlinx.serialization.Serializable
 

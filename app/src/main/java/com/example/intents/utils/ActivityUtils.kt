@@ -1,4 +1,4 @@
-package com.example.intents
+package com.example.intents.utils
 
 import android.os.Build
 import android.view.View

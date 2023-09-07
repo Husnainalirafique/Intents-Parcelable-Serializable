@@ -1,13 +1,16 @@
-package com.example.intents
+package com.example.intents.ui
 
 import android.os.Build
 import android.os.Build.VERSION
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
+import com.example.intents.R
 import com.example.intents.databinding.ActivityOtherActivityBinding
+import com.example.intents.parcelable.Person
+import com.example.intents.serialization.Data
+import com.example.intents.utils.setStatusBarAppearance
 import com.google.android.material.snackbar.Snackbar
 
 //@RequiresApi(Build.VERSION_CODES.TIRAMISU)
